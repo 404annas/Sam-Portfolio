@@ -78,7 +78,7 @@ const Background = () => {
           {pages.map((page, index) => (
             <div
               key={page.id}
-              className={`h-screen w-full flex items-center justify-center flex-shrink-0 ${index !== 0 ? "my-24" : ""
+              className={`h-screen w-full flex items-center justify-center flex-shrink-0 ${index !== 0 ? "my-10" : ""
                 }`}
             >
               {page.component}

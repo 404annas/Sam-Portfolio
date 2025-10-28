@@ -34,7 +34,7 @@ const ServiceItem = ({ number, title, description, isFirst }) => (
     className={`flex items-center justify-between gap-4 border-b border-[#745731] ${isFirst ? "pt-0 pb-3 sm:pb-6" : "py-3 sm:py-6"
       }`}
   >
-    <div className="flex sm:flex-row flex-col items-start gap-0 sm:gap-4 px-4">
+    <div className="flex sm:flex-row flex-col items-start gap-2 sm:gap-4 px-4">
       <p className="ibm text-text-dark/50 text-xs sm:text-sm mt-1">{number}</p>
       <div>
         <h3 className="text-xl sm:text-2xl text-fifth font-semibold tracking-wider">
