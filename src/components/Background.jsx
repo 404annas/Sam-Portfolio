@@ -75,10 +75,11 @@ const Background = () => {
         </div>
 
         <div className="[grid-area:1/1] w-full h-full z-20 overflow-y-scroll snap-y snap-proximity no-scrollbar">
-          {pages.map((page) => (
+          {pages.map((page, index) => (
             <div
               key={page.id}
-              className="h-screen w-full flex items-center justify-center flex-shrink-0 mt-24"
+              className={`h-screen w-full flex items-center justify-center flex-shrink-0 ${index !== 0 ? "my-24" : ""
+                }`}
             >
               {page.component}
             </div>

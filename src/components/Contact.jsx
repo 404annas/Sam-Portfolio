@@ -46,7 +46,7 @@ const Contact = () => {
         </div>
 
         {/* Section 2: Social Links Grid */}
-        <div className="grid grid-cols-4 border-y border-black my-8">
+        <div className="grid grid-cols-4 border-y border-black mt-0 sm:my-8">
           {socialLinks.map((link, index) => (
             <a
               key={index}
@@ -64,7 +64,7 @@ const Contact = () => {
         </div>
 
         {/* Section 3: Email Area, centered in the remaining space */}
-        <div className="flex flex-col items-center text-center flex-grow justify-center pb-8">
+        <div className="flex flex-col items-center text-center flex-grow justify-center pb-0 sm:pb-8">
           <p className="ibm text-xs tracking-tight">EMAIL ME</p>
           <p className="text-[32px] leading-none mt-2">HELLO@PATEL.COM</p>
         </div>
