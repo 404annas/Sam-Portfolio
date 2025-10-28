@@ -27,7 +27,7 @@ const Background = () => {
   }, [cursor]);
 
   return (
-    <div className="bg-first h-screen w-screen flex items-center justify-center p-3">
+    <div className="bg-first h-screen w-screen flex items-center justify-center p-2 sm:p-3">
       {/* The main container grid remains the same */}
       <div className="bg-[#161721] noise-on-card rounded-[40px] h-full w-full relative grid grid-rows-1 grid-cols-1">
         {/* Layer 1: Header/Footer (no changes) */}
@@ -36,20 +36,20 @@ const Background = () => {
           <div className="flex flex-row items-center justify-between z-30">
             <img
               loading="lazy"
-              className="w-10 h-10 rounded-full bg-first hover:bg-second transition-all duration-300"
+              className="w-10 h-10 rounded-full bg-first hover:bg-second transition-all duration-300 border border-[#1F202A]"
               src={avatar}
               alt="Avatar"
             />
             <p
               onMouseEnter={() => setCursor("url(/cursor2.svg), auto")}
               onMouseLeave={() => setCursor("url(/cursor1.svg), auto")}
-              className="bg-first hover:bg-second transition-all duration-300 hover:text-first p-3 rounded-full"
+              className="bg-first hover:bg-second transition-all duration-300 hover:text-first p-2.5 sm:p-3 rounded-full border border-[#1F202A]"
             >
               <Mail size={18} strokeWidth={1.5} />
             </p>
           </div>
           {/* Footer section */}
-          <div className="flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-6">
+          <div className="hidden sm:flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-6">
             <p>&copy; 2025, SAM PATEL</p>
             <div className="flex items-center gap-4">
               <p>LICENSES</p>
@@ -58,7 +58,7 @@ const Background = () => {
         </div>
 
         {/* Layer 2: The background heading (no changes) */}
-        <div className="[grid-area:1/1] w-full h-full flex items-center justify-center overflow-hidden">
+        <div className="[grid-area:1/1] w-full h-full hidden sm:flex items-center justify-center overflow-hidden">
           <motion.h1
             initial={{ rotateX: -90, opacity: 0 }}
             animate={{ rotateX: 0, opacity: 1 }}
@@ -74,11 +74,11 @@ const Background = () => {
           </motion.h1>
         </div>
 
-        <div className="[grid-area:1/1] w-full h-full z-20 overflow-y-scroll snap-y snap-mandatory no-scrollbar">
+        <div className="[grid-area:1/1] w-full h-full z-20 overflow-y-scroll snap-y snap-proximity no-scrollbar">
           {pages.map((page) => (
             <div
               key={page.id}
-              className="h-full w-full flex items-center justify-center snap-center flex-shrink-0"
+              className="h-screen w-full flex items-center justify-center flex-shrink-0"
             >
               {page.component}
             </div>
