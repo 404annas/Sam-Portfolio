@@ -9,12 +9,14 @@ import cursor2 from "../assets/cursor2.svg";
 import Person from './Person';
 import About from './About';
 import Services from "./Services";
+import Contact from "./Contact";
 
 // Create a list of the pages/cards you want to display
 const pages = [
   { id: 1, component: <Person /> },
   { id: 2, component: <About /> },
   { id: 3, component: <Services /> },
+  { id: 4, component: <Contact /> }
 ];
 
 const Background = () => {
