@@ -31,21 +31,21 @@ const servicesData = [
 // --- ServiceItem component remains the same ---
 const ServiceItem = ({ number, title, description, isFirst }) => (
   <div
-    className={`flex items-center justify-between gap-4 border-b border-[#745731] ${isFirst ? "pt-0 pb-6" : "py-6"
+    className={`flex items-center justify-between gap-4 border-b border-[#745731] ${isFirst ? "pt-0 pb-3 sm:pb-6" : "py-3 sm:py-6"
       }`}
   >
-    <div className="flex items-start gap-4 px-4">
-      <p className="ibm text-text-dark/50 text-sm mt-1">{number}</p>
+    <div className="flex sm:flex-row flex-col items-start gap-0 sm:gap-4 px-4">
+      <p className="ibm text-text-dark/50 text-xs sm:text-sm mt-1">{number}</p>
       <div>
-        <h3 className="text-2xl text-fifth font-semibold tracking-wider">
+        <h3 className="text-xl sm:text-2xl text-fifth font-semibold tracking-wider">
           {title}
         </h3>
-        <p className="ibm text-xs text-[#808342] mt-1 tracking-tight font-semibold max-w-[190px]">
+        <p className="ibm text-xs text-[#808342] mt-1 tracking-tight font-semibold max-w-[200px]">
           {description}
         </p>
       </div>
     </div>
-    <img src={star2} alt="star" className="w-14 h-14 pr-4" />
+    <img src={star2} alt="star" className="w-10 h-10 sm:w-14 sm:h-14 pr-4" />
   </div>
 );
 
