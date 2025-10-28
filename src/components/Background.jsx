@@ -68,7 +68,7 @@ const Background = () => {
               perspective: 600,
               transformOrigin: "bottom",
             }}
-            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[26vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-36"
+            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[25vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-36"
           >
             SAM PATEL
           </motion.h1>
