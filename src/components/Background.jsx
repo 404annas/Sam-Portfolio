@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import avatar from "../assets/avatar.avif";
 import { Mail } from "lucide-react";
-import cursor1 from "../assets/cursor1.svg";
-import cursor2 from "../assets/cursor2.svg";
+// import cursor1 from "../public/cursor1.svg";
+// import cursor2 from "../public/cursor2.svg";
 
 // Import BOTH card components
 import Person from "./Person";
@@ -20,7 +20,7 @@ const pages = [
 ];
 
 const Background = () => {
-  const [cursor, setCursor] = useState(`url(${cursor1}), auto`);
+  const [cursor, setCursor] = useState("url(/cursor1.svg), auto");
 
   useEffect(() => {
     document.body.style.cursor = cursor;
@@ -41,8 +41,8 @@ const Background = () => {
               alt="Avatar"
             />
             <p
-              onMouseEnter={() => setCursor(`url(${cursor2}), auto`)}
-              onMouseLeave={() => setCursor(`url(${cursor1}), auto`)}
+              onMouseEnter={() => setCursor("url(/cursor2.svg), auto")}
+              onMouseLeave={() => setCursor("url(/cursor1.svg), auto")}
               className="bg-first hover:bg-second transition-all duration-300 hover:text-first p-3 rounded-full"
             >
               <Mail size={18} strokeWidth={1.5} />
