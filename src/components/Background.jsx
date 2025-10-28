@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import avatar from "../assets/avatar.avif";
 import { Mail } from 'lucide-react';
-import cursor2 from "../assets/cursor-2.svg";
 import cursor1 from "../assets/cursor1.svg";
-// Import the new Person component
+import cursor2 from "../assets/cursor-2.svg";
 import Person from './Person';
 
 const Background = () => {
@@ -15,41 +15,44 @@ const Background = () => {
 
   return (
     <div className='bg-first h-screen w-screen flex items-center justify-center p-3'>
-      <div className='bg-[#1A1A1A] noise-overlay rounded-[40px] h-full w-full relative flex flex-col justify-between p-5 overflow-hidden'>
+      {/* The main container is now a grid to allow layering */}
+      <div className='bg-[#161721] noise-on-card rounded-[40px] h-full w-full relative grid grid-rows-1 grid-cols-1'>
 
-        {/* Top section */}
-        <div className='flex flex-row items-center justify-between z-10'>
-          <img
-            loading='lazy'
-            className='w-10 h-10 rounded-full bg-first hover:bg-second transition-all duration-300'
-            src={avatar}
-            alt='Avatar'
-          />
-          <p
-            onMouseEnter={() => setCursor(`url(${cursor2}), auto`)}
-            onMouseLeave={() => setCursor(`url(${cursor1}), auto`)}
-            className='bg-first hover:bg-second transition-all duration-300 hover:text-first p-3 rounded-full'
-          >
-            <Mail size={18} strokeWidth={1.5} />
-          </p>
-        </div>
-
-        {/* 
-          CENTER SECTION:
-          This is where we place the Person component.
-          The 'flex-grow' and layout classes will center it perfectly.
-        */}
-        <div className='flex-grow flex items-center justify-center'>
-          <Person />
-        </div>
-
-        {/* Footer section */}
-        <div className='flex flex-row items-center justify-between text-first w-full px-5 text-xs ibm z-10'>
-          <p>&copy; 2025, SAM PATEL</p>
-          <div className='flex items-center gap-4'>
-            <p>LICENSES</p>
-            <p>POWERED BY WEBFLOW</p>
+        {/* Layer 1: All elements will occupy the same grid cell */}
+        <div className='[grid-area:1/1] flex flex-col justify-between p-5'>
+          {/* Top section with a high z-index */}
+          <div className='flex flex-row items-center justify-between z-30'>
+            <img loading='lazy' className='w-10 h-10 rounded-full bg-first hover:bg-second transition-all duration-300' src={avatar} alt='Avatar' />
+            <p onMouseEnter={() => setCursor(`url(${cursor2}), auto`)} onMouseLeave={() => setCursor(`url(${cursor1}), auto`)} className='bg-first hover:bg-second transition-all duration-300 hover:text-first p-3 rounded-full'>
+              <Mail size={18} strokeWidth={1.5} />
+            </p>
           </div>
+          {/* Footer section with a high z-index */}
+          <div className='flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-4'>
+            <p>&copy; 2025, SAM PATEL</p>
+            <div className='flex items-center gap-4'>
+              <p>LICENSES</p>
+              <p>POWERED BY WEBFLOW</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Layer 2: The background heading */}
+        <div className='[grid-area:1/1] w-full h-full flex items-center justify-center overflow-hidden'>
+          <motion.h1
+            initial={{ rotateX: -90, opacity: 0 }}
+            animate={{ rotateX: 0, opacity: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            style={{ transformStyle: "preserve-3d", perspective: 600, transformOrigin: "bottom" }}
+            className='text-first text-[8vw] sm:text-[10vw] md:text-[12vw] lg:text-[26vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-36'
+          >
+            SAM PATEL
+          </motion.h1>
+        </div>
+
+        {/* Layer 3: The Person card on top */}
+        <div className='[grid-area:1/1] w-full h-full flex items-center justify-center z-20'>
+          <Person />
         </div>
 
       </div>
