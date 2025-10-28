@@ -27,7 +27,7 @@ const Background = () => {
   }, [cursor]);
 
   return (
-    <div className="bg-first h-screen w-screen flex items-center justify-center p-2 sm:p-3">
+    <div className="bg-first h-screen w-screen flex items-center justify-center p-3">
       {/* The main container grid remains the same */}
       <div className="bg-[#161721] noise-on-card rounded-[40px] h-full w-full relative grid grid-rows-1 grid-cols-1">
         {/* Layer 1: Header/Footer (no changes) */}
@@ -36,14 +36,14 @@ const Background = () => {
           <div className="flex flex-row items-center justify-between z-30">
             <img
               loading="lazy"
-              className="w-10 h-10 rounded-full bg-first hover:bg-second transition-all duration-300 border border-[#1F202A]"
+              className="w-10 h-10 rounded-full bg-first hover:bg-second transition-all duration-300 border border-[#161721]"
               src={avatar}
               alt="Avatar"
             />
             <p
               onMouseEnter={() => setCursor("url(/cursor2.svg), auto")}
               onMouseLeave={() => setCursor("url(/cursor1.svg), auto")}
-              className="bg-first hover:bg-second transition-all duration-300 hover:text-first p-2.5 sm:p-3 rounded-full border border-[#1F202A]"
+              className="bg-first hover:bg-second transition-all duration-300 hover:text-first p-2.5 sm:p-3 border border-[#161721] rounded-full"
             >
               <Mail size={18} strokeWidth={1.5} />
             </p>

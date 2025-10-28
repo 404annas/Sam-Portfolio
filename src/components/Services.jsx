@@ -31,9 +31,8 @@ const servicesData = [
 // --- ServiceItem component remains the same ---
 const ServiceItem = ({ number, title, description, isFirst }) => (
   <div
-    className={`flex items-center justify-between gap-4 border-b border-[#745731] ${
-      isFirst ? "pt-0 pb-6" : "py-6"
-    }`}
+    className={`flex items-center justify-between gap-4 border-b border-[#745731] ${isFirst ? "pt-0 pb-6" : "py-6"
+      }`}
   >
     <div className="flex items-start gap-4 px-4">
       <p className="ibm text-text-dark/50 text-sm mt-1">{number}</p>
