@@ -49,7 +49,7 @@ const Background = () => {
             </p>
           </div>
           {/* Footer section */}
-          <div className="flex flex-row items-center justify-between text-first w-full text-xs ibm z-30">
+          <div className="flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-6">
             <p>&copy; 2025, SAM PATEL</p>
             <div className="flex items-center gap-4">
               <p>LICENSES</p>
