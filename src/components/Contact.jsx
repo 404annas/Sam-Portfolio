@@ -64,7 +64,7 @@ const Contact = () => {
         </div>
 
         {/* Section 3: Email Area, centered in the remaining space */}
-        <div className="flex flex-col items-center text-center flex-grow justify-center py-6 sm:py-8">
+        <div className="flex flex-col items-center text-center flex-grow justify-center py-10 sm:py-8">
           <p className="ibm text-xs tracking-tight">EMAIL ME</p>
           <p className="text-[32px] leading-none mt-2">HELLO@PATEL.COM</p>
         </div>
