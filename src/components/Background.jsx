@@ -16,7 +16,7 @@ const pages = [
   { id: 1, component: <Person /> },
   { id: 2, component: <About /> },
   { id: 3, component: <Services /> },
-  { id: 4, component: <Contact /> }
+  { id: 4, component: <Contact /> },
 ];
 
 const Background = () => {
@@ -49,11 +49,10 @@ const Background = () => {
             </p>
           </div>
           {/* Footer section */}
-          <div className="flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-4">
+          <div className="flex flex-row items-center  justify-between text-first w-full text-sm ibm z-30">
             <p>&copy; 2025, SAM PATEL</p>
             <div className="flex items-center gap-4">
               <p>LICENSES</p>
-              <p>POWERED BY WEBFLOW</p>
             </div>
           </div>
         </div>
@@ -69,7 +68,7 @@ const Background = () => {
               perspective: 600,
               transformOrigin: "bottom",
             }}
-            className="text-first text-[8vw] sm:text-[10vw] md:text-[12vw] lg:text-[26vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-36"
+            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[26vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-36"
           >
             SAM PATEL
           </motion.h1>
