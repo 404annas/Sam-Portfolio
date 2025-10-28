@@ -2,6 +2,7 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import personImage from "../assets/person.avif";
 import star from "../assets/star2.svg";
+import CardWrapper from "./CardWrapper";
 
 // MarqueeContent component remains the same...
 const MarqueeContent = () => (
@@ -19,7 +20,7 @@ const Person = () => {
     <div className="relative ticket-shape">
       {/* The original card container is now inside the wrapper. */}
       {/* It keeps overflow-hidden to round the corners of its content. */}
-      <div className="bg-first noise-on-card lg:w-[clamp(300px,30vw,390px)] w-[360px] 2xl:h-[68vh] xl:h-[85vh]  md:h-[70px]  rounded-2xl flex flex-col overflow-hidden">
+      <CardWrapper>
         {/* Scrollable Area */}
         <div className="flex-grow custom-scrollbar overflow-y-auto">
           <div className="relative z-10 px-6 py-4">
@@ -56,7 +57,7 @@ const Person = () => {
             </div>
           </div>
         </div>
-      </div>
+      </CardWrapper>
     </div>
   );
 };
