@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import avatar from "../assets/avatar.avif";
-import { Mail } from 'lucide-react';
+import { Mail } from "lucide-react";
 import cursor1 from "../assets/cursor1.svg";
 import cursor2 from "../assets/cursor2.svg";
 
@@ -39,7 +39,7 @@ const Background = () => {
           {/* Footer section */}
           <div className='flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-4'>
             <p>&copy; 2025, SAM PATEL</p>
-            <div className='flex items-center gap-4'>
+            <div className="flex items-center gap-4">
               <p>LICENSES</p>
               <p>POWERED BY WEBFLOW</p>
             </div>
@@ -52,8 +52,12 @@ const Background = () => {
             initial={{ rotateX: -90, opacity: 0 }}
             animate={{ rotateX: 0, opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            style={{ transformStyle: "preserve-3d", perspective: 600, transformOrigin: "bottom" }}
-            className='text-first text-[8vw] sm:text-[10vw] md:text-[12vw] lg:text-[26vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-36'
+            style={{
+              transformStyle: "preserve-3d",
+              perspective: 600,
+              transformOrigin: "bottom",
+            }}
+            className="text-first text-[8vw] sm:text-[10vw] md:text-[12vw] lg:text-[26vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-36"
           >
             SAM PATEL
           </motion.h1>
@@ -66,10 +70,9 @@ const Background = () => {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );
-}
+};
 
 export default Background;
