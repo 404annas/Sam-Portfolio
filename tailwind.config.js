@@ -8,7 +8,8 @@ export default {
       colors: {
         first: '#F2F666',
         second: '#D42531',
-        third: "#171822"
+        third: "#171822",
+        forth: "#1B1720"
       },
     },
   },

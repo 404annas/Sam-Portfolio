@@ -3,8 +3,17 @@ import { motion } from 'framer-motion';
 import avatar from "../assets/avatar.avif";
 import { Mail } from 'lucide-react';
 import cursor1 from "../assets/cursor1.svg";
-import cursor2 from "../assets/cursor-2.svg";
+import cursor2 from "../assets/cursor2.svg";
+
+// Import BOTH card components
 import Person from './Person';
+import About from './About';
+
+// Create a list of the pages/cards you want to display
+const pages = [
+  { id: 1, component: <Person /> },
+  { id: 2, component: <About /> },
+];
 
 const Background = () => {
   const [cursor, setCursor] = useState(`url(${cursor1}), auto`);
@@ -15,19 +24,19 @@ const Background = () => {
 
   return (
     <div className='bg-first h-screen w-screen flex items-center justify-center p-3'>
-      {/* The main container is now a grid to allow layering */}
+      {/* The main container grid remains the same */}
       <div className='bg-[#161721] noise-on-card rounded-[40px] h-full w-full relative grid grid-rows-1 grid-cols-1'>
 
-        {/* Layer 1: All elements will occupy the same grid cell */}
+        {/* Layer 1: Header/Footer (no changes) */}
         <div className='[grid-area:1/1] flex flex-col justify-between p-5'>
-          {/* Top section with a high z-index */}
+          {/* Top section */}
           <div className='flex flex-row items-center justify-between z-30'>
             <img loading='lazy' className='w-10 h-10 rounded-full bg-first hover:bg-second transition-all duration-300' src={avatar} alt='Avatar' />
             <p onMouseEnter={() => setCursor(`url(${cursor2}), auto`)} onMouseLeave={() => setCursor(`url(${cursor1}), auto`)} className='bg-first hover:bg-second transition-all duration-300 hover:text-first p-3 rounded-full'>
               <Mail size={18} strokeWidth={1.5} />
             </p>
           </div>
-          {/* Footer section with a high z-index */}
+          {/* Footer section */}
           <div className='flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-4'>
             <p>&copy; 2025, SAM PATEL</p>
             <div className='flex items-center gap-4'>
@@ -37,7 +46,7 @@ const Background = () => {
           </div>
         </div>
 
-        {/* Layer 2: The background heading */}
+        {/* Layer 2: The background heading (no changes) */}
         <div className='[grid-area:1/1] w-full h-full flex items-center justify-center overflow-hidden'>
           <motion.h1
             initial={{ rotateX: -90, opacity: 0 }}
@@ -50,9 +59,12 @@ const Background = () => {
           </motion.h1>
         </div>
 
-        {/* Layer 3: The Person card on top */}
-        <div className='[grid-area:1/1] w-full h-full flex items-center justify-center z-20'>
-          <Person />
+        <div className='[grid-area:1/1] w-full h-full z-20 overflow-y-scroll snap-y snap-mandatory no-scrollbar'>
+          {pages.map((page) => (
+            <div key={page.id} className='h-full w-full flex items-center justify-center snap-center flex-shrink-0'>
+              {page.component}
+            </div>
+          ))}
         </div>
 
       </div>
