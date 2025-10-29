@@ -1,18 +1,15 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 import avatar from "../assets/avatar.avif";
 import { Mail } from "lucide-react";
-// import cursor1 from "../public/cursor1.svg";
-// import cursor2 from "../public/cursor2.svg";
 
-// Import BOTH card components
 import Person from "./Person";
 import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
 import Works from "./Works";
 
-// Create a list of the pages/cards you want to display
 const pages = [
   { id: 1, component: <Person /> },
   { id: 2, component: <About /> },
@@ -21,20 +18,38 @@ const pages = [
   { id: 5, component: <Contact /> },
 ];
 
+const FOLD_AMOUNT = 45;
+
 const Background = () => {
   const [cursor, setCursor] = useState("url(/cursor1.svg), auto");
+  const scrollRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    container: scrollRef,
+  });
+
+  const totalPages = pages.length;
 
   useEffect(() => {
     document.body.style.cursor = cursor;
+
+    // ✅ Prevent horizontal scroll globally
+    document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflowX = "hidden";
+
+    return () => {
+      document.body.style.overflowX = "";
+      document.documentElement.style.overflowX = "";
+    };
   }, [cursor]);
 
   return (
-    <div className="bg-first h-screen w-screen flex items-center justify-center p-3">
-      {/* The main container grid remains the same */}
-      <div className="bg-[#161721] noise-on-card rounded-[40px] h-full w-full relative grid grid-rows-1 grid-cols-1">
-        {/* Layer 1: Header/Footer (no changes) */}
+    <div className="bg-first h-screen w-screen flex items-center justify-center p-3 overflow-x-hidden">
+      <div
+        className="bg-[#161721] rounded-[40px] h-full w-full relative z-0 grid grid-rows-1 grid-cols-1 overflow-hidden"
+      >
+        {/* Header and Footer */}
         <div className="[grid-area:1/1] flex flex-col justify-between p-5">
-          {/* Top section */}
           <div className="flex flex-row items-center justify-between z-30">
             <img
               loading="lazy"
@@ -50,7 +65,7 @@ const Background = () => {
               <Mail size={18} strokeWidth={1.5} />
             </p>
           </div>
-          {/* Footer section */}
+
           <div className="hidden lg:flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-6">
             <p>&copy; 2025, SAM PATEL</p>
             <div className="flex items-center gap-4">
@@ -59,7 +74,7 @@ const Background = () => {
           </div>
         </div>
 
-        {/* Layer 2: The background heading (no changes) */}
+        {/* Background Heading */}
         <div className="[grid-area:1/1] w-full h-full hidden lg:flex items-center justify-center overflow-hidden">
           <motion.h1
             initial={{ rotateX: -90, opacity: 0 }}
@@ -70,21 +85,45 @@ const Background = () => {
               perspective: 600,
               transformOrigin: "bottom",
             }}
-            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[25vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-36"
+            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[25vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-48"
           >
             SAM PATEL
           </motion.h1>
         </div>
 
-        <div className="[grid-area:1/1] w-full h-full z-20 overflow-y-scroll snap-y snap-proximity no-scrollbar">
-          {pages.map((page, index) => (
-            <div
-              key={page.id}
-              className={`h-screen w-full flex items-center justify-center flex-shrink-0`}
-            >
-              {page.component}
-            </div>
-          ))}
+        {/* 3D Scrolling Cards */}
+        <div
+          ref={scrollRef}
+          className="[grid-area:1/1] w-full h-full z-20 overflow-y-auto overflow-x-hidden no-scrollbar"
+          style={{ scrollbarGutter: "stable" }}
+        >
+          {pages.map((page, index) => {
+            const inputRange = [
+              (index - 1) / (totalPages - 1),
+              index / (totalPages - 1),
+              (index + 1) / (totalPages - 1),
+            ];
+            const outputRange = [FOLD_AMOUNT, 0, -FOLD_AMOUNT];
+            const rotateX = useTransform(scrollYProgress, inputRange, outputRange);
+
+            return (
+              <div
+                key={page.id}
+                style={{ perspective: "1000px" }}
+                className="h-screen w-full flex-shrink-0 overflow-x-hidden overflow-y-hidden" /* <-- FIX APPLIED HERE */
+              >
+                <motion.div
+                  style={{
+                    rotateX,
+                    transformOrigin: "center",
+                  }}
+                  className="w-full h-full flex items-center justify-center overflow-x-hidden"
+                >
+                  {page.component}
+                </motion.div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

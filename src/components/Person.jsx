@@ -50,6 +50,8 @@ const Person = () => {
                 <MarqueeContent />
                 <MarqueeContent />
                 <MarqueeContent />
+                <MarqueeContent />
+                <MarqueeContent />
               </Marquee>
             </div>
           </div>
