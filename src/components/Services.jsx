@@ -1,4 +1,3 @@
-import React from "react";
 import Marquee from "react-fast-marquee";
 import star from "../assets/star2.svg";
 import star2 from "../assets/star.svg";
@@ -37,10 +36,10 @@ const ServiceItem = ({ number, title, description, isFirst }) => (
     <div className="flex sm:flex-row flex-col items-start gap-2 sm:gap-4 px-4">
       <p className="ibm text-text-dark/50 text-xs sm:text-sm mt-1">{number}</p>
       <div>
-        <h3 className="text-xl sm:text-2xl text-fifth font-semibold tracking-wider">
+        <h3 className="text-xl sm:text-2xl text-third font-semibold tracking-wider">
           {title}
         </h3>
-        <p className="ibm text-xs text-[#808342] mt-1 tracking-tight font-semibold max-w-[200px]">
+        <p className="ibm text-xs text-[#393B2C] mt-1 tracking-tight font-semibold max-w-[200px]">
           {description}
         </p>
       </div>
@@ -52,10 +51,10 @@ const ServiceItem = ({ number, title, description, isFirst }) => (
 // --- MarqueeContent component remains the same ---
 const MarqueeContent = () => (
   <div className="flex items-center">
-    <span className="ibm text-xs font-medium text-first uppercase mx-4">
+    <span className="ibm text-xs font-medium text-third uppercase mx-4">
       Services
     </span>
-    <img src={star} alt="star" className="w-4 h-4" />
+    <img src={star2} alt="star" className="w-4 h-4" />
   </div>
 );
 
@@ -83,7 +82,7 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="bg-second py-4 mt-4">
+        <div className="bg-six py-4 mt-4">
           <Marquee speed={60} gradient={false}>
             <MarqueeContent />
             <MarqueeContent />

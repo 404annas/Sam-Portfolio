@@ -1,11 +1,10 @@
-import React from "react";
 import Marquee from "react-fast-marquee";
-import star from "../assets/star2.svg";
+import star from "../assets/star.svg";
 import CardWrapper from "./CardWrapper";
 
 const MarqueeContent = () => (
   <div className="flex items-center">
-    <span className="ibm text-xs font-medium text-first uppercase mx-4">
+    <span className="ibm text-xs font-medium text-third uppercase mx-4">
       Background
     </span>
     <img src={star} alt="star" className="w-4 h-4" />
@@ -58,7 +57,7 @@ const About = () => {
       </div>
 
       {/* Section 3: Marquee Footer */}
-      <div className="bg-second py-3 sm:py-4 mt-auto">
+      <div className="bg-six py-3 sm:py-4 mt-auto">
         <Marquee speed={60} gradient={false}>
           <MarqueeContent />
           <MarqueeContent />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import avatar from "../assets/avatar.avif";
 import { Mail } from "lucide-react";
@@ -10,13 +10,15 @@ import Person from "./Person";
 import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
+import Works from "./Works";
 
 // Create a list of the pages/cards you want to display
 const pages = [
   { id: 1, component: <Person /> },
   { id: 2, component: <About /> },
   { id: 3, component: <Services /> },
-  { id: 4, component: <Contact /> },
+  { id: 4, component: <Works /> },
+  { id: 5, component: <Contact /> },
 ];
 
 const Background = () => {
@@ -36,14 +38,14 @@ const Background = () => {
           <div className="flex flex-row items-center justify-between z-30">
             <img
               loading="lazy"
-              className="w-10 h-10 rounded-full bg-first hover:bg-second transition-all duration-300 border border-[#161721]"
+              className="w-10 h-10 rounded-full bg-first hover:bg-six transition-all duration-300 border border-[#161721]"
               src={avatar}
               alt="Avatar"
             />
             <p
               onMouseEnter={() => setCursor("url(/cursor2.svg), auto")}
               onMouseLeave={() => setCursor("url(/cursor1.svg), auto")}
-              className="bg-first hover:bg-second transition-all duration-300 hover:text-first p-2.5 sm:p-3 border border-[#161721] rounded-full"
+              className="bg-first hover:bg-six transition-all duration-300 hover:text-third p-2.5 sm:p-3 border border-[#161721] rounded-full"
             >
               <Mail size={18} strokeWidth={1.5} />
             </p>

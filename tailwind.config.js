@@ -6,11 +6,12 @@ export default {
   ], theme: {
     extend: {
       colors: {
-        first: '#F2F666',
+        first: '#b6684a',
         second: '#D42531',
         third: "#171822",
         forth: "#1B1720",
-        fifth: "#4D4F32"
+        fifth: "#4D4F32",
+        six: "#92543b"
       },
     },
   },

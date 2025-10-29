@@ -1,12 +1,11 @@
-import React from "react";
 import Marquee from "react-fast-marquee";
 import personImage from "../assets/person.avif";
-import star from "../assets/star2.svg";
+import star from "../assets/star.svg";
 import CardWrapper from "./CardWrapper";
 
 const MarqueeContent = () => (
   <div className="flex items-center">
-    <span className="ibm text-[10px] text-xs font-medium text-first uppercase mx-4">
+    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
       Data Scientist
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -46,7 +45,7 @@ const Person = () => {
 
           {/* Marquee Section */}
           <div className="mt-4">
-            <div className="relative z-10 bg-second py-3 sm:py-4">
+            <div className="relative z-10 bg-six py-3 sm:py-4">
               <Marquee speed={60} gradient={false}>
                 <MarqueeContent />
                 <MarqueeContent />
