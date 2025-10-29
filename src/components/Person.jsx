@@ -6,7 +6,7 @@ import CardWrapper from "./CardWrapper";
 
 const MarqueeContent = () => (
   <div className="flex items-center">
-    <span className="ibm text-[10px] sm:text-xs md:text-sm font-medium text-first uppercase mx-4">
+    <span className="ibm text-[10px] text-xs font-medium text-first uppercase mx-4">
       Data Scientist
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />

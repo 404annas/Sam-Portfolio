@@ -46,7 +46,7 @@ const Contact = () => {
         </div>
 
         {/* Section 2: Social Links Grid */}
-        <div className="grid grid-cols-4 border-y border-black mt-4 sm:my-8">
+        <div className="grid grid-cols-4 border-y border-black mt-4 sm:mt-4 sm:mb-0">
           {socialLinks.map((link, index) => (
             <a
               key={index}
