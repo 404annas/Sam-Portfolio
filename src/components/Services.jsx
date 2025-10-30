@@ -20,13 +20,13 @@ const servicesData = [
     title: "Project Manager",
     description: "LEAD TEAMS EFFECTIVELY TO DELIVER STRATEGIC SOLUTIONS FAST.",
   },
+  // {
+  //   number: "04",
+  //   title: "E-commerce",
+  //   description: "CREATE DIGITAL STORES THAT TRANSFORM VISITORS INTO CUSTOMERS.",
+  // },
   {
     number: "04",
-    title: "E-commerce",
-    description: "CREATE DIGITAL STORES THAT TRANSFORM VISITORS INTO CUSTOMERS.",
-  },
-  {
-    number: "05",
     title: "Blockchain",
     description: "DEVELOP SECURE LEDGER SYSTEMS THAT ENABLE TRUSTED NETWORKS.",
   },

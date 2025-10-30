@@ -58,21 +58,15 @@ const Works = () => {
                 </div>
                 <div
                     className="
-            flex-grow grid grid-cols-2 grid-rows-2 
+            flex-grow grid grid-cols-2 
          border-forth
           "
                 >
-                    <div className="border-r border-t border-b border-forth">
+                    <div className="border-r border-t border-forth">
                         <StatBlock value="110+" label="PROJECTS COMPLETED" />
                     </div>
-                    <div className="border-b border-t border-forth">
+                    <div className="border-t border-forth">
                         <StatBlock value="12+" label="YEARS EXPERIENCE" />
-                    </div>
-                    <div className="border-r border-forth">
-                        <StatBlock value="95%" label="MODEL ACCURACY" />
-                    </div>
-                    <div>
-                        <StatBlock value="20+" label="INDUSTRIES EXPLORED" />
                     </div>
                 </div>
             </div>
