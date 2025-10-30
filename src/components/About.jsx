@@ -29,7 +29,7 @@ const About = () => {
         <div className="text-[#2C2E28] px-4 sm:px-6 pt-6 sm:pt-8">
           <p className="ibm text-xs font-medium tracking-tight">ABOUT ME</p>
           <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium text-third uppercase">
-            Founder & CEO of the software agency, Techxudo. Expert in Problem Solving, Application Design, Implementing Modernage Application techniques.
+            Founder & CEO of software agency, Techxudo. Expert in Problem Solving, Application Design, Implementing Modern Application Techniques.
           </p>
         </div>
 
