@@ -7,23 +7,28 @@ import CardWrapper from "./CardWrapper";
 const servicesData = [
   {
     number: "01",
-    title: "DATA ANALYSIS",
-    description: "UNCOVER MEANINGFUL TRENDS AND INSIGHTS FROM DATASETS.",
+    title: "Computer Scientist",
+    description: "DESIGN INTELLIGENT SYSTEMS THAT POWER FUTURE INNOVATIONS.",
   },
   {
     number: "02",
-    title: "MACHINE LEARNING",
-    description: "BUILD PREDICTIVE MODELS TO SOLVE BUSINESS PROBLEMS.",
+    title: "Backend Engineer",
+    description: "BUILD SCALABLE ARCHITECTURES THAT DRIVE DIGITAL PLATFORMS.",
   },
   {
     number: "03",
-    title: "DATA VISUALIZATION",
-    description: "CREATE CLEAR, IMPACTFUL CHARTS AND DASHBOARDS.",
+    title: "Project Manager",
+    description: "LEAD TEAMS EFFECTIVELY TO DELIVER STRATEGIC SOLUTIONS FAST.",
   },
   {
     number: "04",
-    title: "STATISTICAL MODELING",
-    description: "IMPLEMENT RIGOROUS METHODS TO ENSURE ACCURATE RESULTS.",
+    title: "E-commerce",
+    description: "CREATE DIGITAL STORES THAT TRANSFORM VISITORS INTO CUSTOMERS.",
+  },
+  {
+    number: "05",
+    title: "Blockchain",
+    description: "DEVELOP SECURE LEDGER SYSTEMS THAT ENABLE TRUSTED NETWORKS.",
   },
 ];
 
@@ -36,15 +41,15 @@ const ServiceItem = ({ number, title, description, isFirst }) => (
     <div className="flex sm:flex-row flex-col items-start gap-2 sm:gap-4 px-4">
       <p className="ibm text-text-dark/50 text-xs sm:text-sm mt-1">{number}</p>
       <div>
-        <h3 className="text-xl sm:text-2xl text-third font-semibold tracking-wider">
+        <h3 className="text-xl sm:text-2xl text-third font-semibold tracking-wider uppercase">
           {title}
         </h3>
-        <p className="ibm text-xs text-[#393B2C] mt-1 tracking-tight font-semibold max-w-[200px]">
+        <p className="ibm text-xs text-[#393B2C] mt-1 tracking-tight font-semibold max-w-[240px]">
           {description}
         </p>
       </div>
     </div>
-    <img src={star2} alt="star" className="w-10 h-10 sm:w-14 sm:h-14 pr-4" />
+    <img src={star2} alt="star" className="w-10 h-10 sm:w-12 sm:h-12 pr-4" />
   </div>
 );
 

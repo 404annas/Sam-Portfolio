@@ -3,15 +3,15 @@ import avatar from "../assets/avatar.avif"; // Your circular profile image
 import star from "../assets/star.svg"; // The star icon for the marquee
 
 // Icons from lucide-react library
-import { Github, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Github, Linkedin, Instagram, Globe } from "lucide-react";
 import CardWrapper from "./CardWrapper";
 
 // --- Data for the social links to keep the code clean and manageable ---
 const socialLinks = [
-  { icon: <Github size={24} />, href: "https://github.com" },
-  { icon: <Linkedin size={24} />, href: "https://linkedin.com" },
-  { icon: <Twitter size={24} />, href: "https://twitter.com" },
-  { icon: <Facebook size={24} />, href: "https://facebook.com" },
+  { icon: <Github size={24} />, href: "https://github.com/MTalhashah" },
+  { icon: <Linkedin size={24} />, href: "https://www.linkedin.com/in/syed-talha-shah" },
+  { icon: <Instagram size={24} />, href: "https://www.instagram.com/me_talhashah" },
+  { icon: <Globe size={24} />, href: "http://techxudo.com" },
 ];
 
 // --- A small, reusable component for the marquee content ---
@@ -65,7 +65,7 @@ const Contact = () => {
         {/* Section 3: Email Area, centered in the remaining space */}
         <div className="flex flex-col items-center text-center flex-grow justify-center py-10 sm:py-8">
           <p className="ibm text-xs tracking-tight">EMAIL ME</p>
-          <p className="text-[32px] leading-none mt-2">HELLO@PATEL.COM</p>
+          <a href="mailto:syedmuhammadtalha.002@gmail.com" className="text-lg sm:text-2xl leading-none mt-2 uppercase text-third">syedmuhammadtalha.002@gmail.com</a>
         </div>
       </div>
 

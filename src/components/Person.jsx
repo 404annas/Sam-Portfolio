@@ -2,11 +2,28 @@ import Marquee from "react-fast-marquee";
 import personImage from "../assets/person.avif";
 import star from "../assets/star.svg";
 import CardWrapper from "./CardWrapper";
+import mainImage from "../assets/main.jpeg";
 
 const MarqueeContent = () => (
   <div className="flex items-center">
     <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
-      Data Scientist
+      Computer Scientist
+    </span>
+    <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
+    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+      Backend Engineer
+    </span>
+    <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
+    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+      Project Manager
+    </span>
+    <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
+    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+      E-commerce specialist
+    </span>
+    <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
+    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+      Blockchain
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
   </div>
@@ -21,20 +38,20 @@ const Person = () => {
             {/* Name */}
             <h2
               className="
-                text-third text-[64px] lg:text-[82px]
+                text-third text-[64px] lg:text-[75px]
                 text-center leading-none whitespace-nowrap
               "
               style={{ fontFamily: '"Instrument Serif", serif' }}
             >
-              SAM PATEL
+              TALHA SHAH
             </h2>
 
             {/* Dotted Line */}
-            <div className="dotted-line-lg my-6"></div>
+            <div className="dotted-line-lg my-8"></div>
 
             {/* Image Section */}
             <div className="relative aspect-square w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] mx-auto">
-              <div className="absolute inset-0 bg-second"></div>
+              {/* <div className="absolute inset-0 bg-second"></div> */}
               <img
                 src={personImage}
                 alt="Sam Patel"

@@ -5,7 +5,7 @@ import CardWrapper from "./CardWrapper";
 const MarqueeContent = () => (
   <div className="flex items-center">
     <span className="ibm text-xs font-medium text-third uppercase mx-4">
-      Background
+      A techpreneur and problem Solver
     </span>
     <img src={star} alt="star" className="w-4 h-4" />
   </div>
@@ -28,9 +28,8 @@ const About = () => {
         {/* Section 1: About Me */}
         <div className="text-[#2C2E28] px-4 sm:px-6 pt-6 sm:pt-8">
           <p className="ibm text-xs font-medium tracking-tight">ABOUT ME</p>
-          <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium">
-            I'M SAM PATEL, A DATA SCIENTIST WHO LOVES USING DATA TO SOLVE
-            COMPLEX PROBLEMS AND DELIVER CLEAR, IMPACTFUL INSIGHTS.
+          <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium text-third uppercase">
+            Founder & CEO of the software agency, Techxudo. Expert in Problem Solving, Application Design, Implementing Modernage Application techniques.
           </p>
         </div>
 
@@ -38,7 +37,7 @@ const About = () => {
         <div
           className="
             flex-grow grid grid-cols-2 grid-rows-2 
-            border-t border-forth mt-4 sm:mt-6
+            border-t border-forth mt-4
           "
         >
           <div className="border-r border-b border-forth">

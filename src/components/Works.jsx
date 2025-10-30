@@ -2,6 +2,7 @@ import Marquee from "react-fast-marquee";
 import star from "../assets/star.svg";
 import CardWrapper from "./CardWrapper";
 import Pepsi from "../assets/pespi.png";
+import pepsiLogo from "../assets/brand2.webp";
 
 const MarqueeContent = () => (
     <div className="flex items-center">
@@ -18,7 +19,7 @@ const StatBlock = ({ value, label }) => (
         <p className="ibm text-xs text-[#393B2C] tracking-tight mt-4 sm:mt-6 font-semibold">
             {label}
         </p> */}
-        <img className="w-24 mt-2" loading="lazy" src={Pepsi} alt="Logo1" />
+        <img className="w-24 mt-2" loading="lazy" src={pepsiLogo} alt="Logo1" />
     </div>
 );
 
@@ -30,7 +31,7 @@ const Works = () => {
                 {/* Section 1: About Me */}
                 <div className="text-[#2C2E28] px-4 sm:px-6 pt-6 sm:pt-8">
                     <p className="ibm text-xs font-medium tracking-tight">BRANDS WE'VE WORKED WITH</p>
-                    <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium uppercase">
+                    <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium uppercase text-third">
                         Over the years, we have had the privilege of collaborating with top brands across industries.
                     </p>
                 </div>
@@ -46,6 +47,25 @@ const Works = () => {
                         <StatBlock value="110+" label="PROJECTS COMPLETED" />
                     </div>
                     <div className="border-b border-forth">
+                        <StatBlock value="12+" label="YEARS EXPERIENCE" />
+                    </div>
+                    <div className="border-r border-forth">
+                        <StatBlock value="95%" label="MODEL ACCURACY" />
+                    </div>
+                    <div>
+                        <StatBlock value="20+" label="INDUSTRIES EXPLORED" />
+                    </div>
+                </div>
+                <div
+                    className="
+            flex-grow grid grid-cols-2 grid-rows-2 
+         border-forth
+          "
+                >
+                    <div className="border-r border-t border-b border-forth">
+                        <StatBlock value="110+" label="PROJECTS COMPLETED" />
+                    </div>
+                    <div className="border-b border-t border-forth">
                         <StatBlock value="12+" label="YEARS EXPERIENCE" />
                     </div>
                     <div className="border-r border-forth">

@@ -57,19 +57,19 @@ const Background = () => {
               src={avatar}
               alt="Avatar"
             />
-            <p
+            <a href="mailto:syedmuhammadtalha.002@gmail.com" target="_blank"
               onMouseEnter={() => setCursor("url(/cursor2.svg), auto")}
               onMouseLeave={() => setCursor("url(/cursor1.svg), auto")}
               className="bg-first hover:bg-six transition-all duration-300 hover:text-third p-2.5 sm:p-3 border border-[#161721] rounded-full"
             >
               <Mail size={18} strokeWidth={1.5} />
-            </p>
+            </a>
           </div>
 
           <div className="hidden lg:flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-6">
-            <p>&copy; 2025, SAM PATEL</p>
+            <p className="">Syed Talha Shah</p>
             <div className="flex items-center gap-4">
-              <p>LICENSES</p>
+              <p>Founder and CEO <a href="http://techxudo.com/" target="_blank">@Techxudo</a></p>
             </div>
           </div>
         </div>
@@ -85,9 +85,9 @@ const Background = () => {
               perspective: 600,
               transformOrigin: "bottom",
             }}
-            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[25vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-48"
+            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[23vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-48"
           >
-            SAM PATEL
+            TALHA SHAH
           </motion.h1>
         </div>
 
