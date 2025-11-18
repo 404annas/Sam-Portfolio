@@ -60,7 +60,7 @@ const Background = () => {
             <a href="mailto:syedmuhammadtalha.002@gmail.com" target="_blank"
               onMouseEnter={() => setCursor("url(/cursor2.svg), auto")}
               onMouseLeave={() => setCursor("url(/cursor1.svg), auto")}
-              className="bg-first hover:bg-six transition-all duration-300 hover:text-third p-2.5 sm:p-3 border border-[#161721] rounded-full"
+              className="bg-first hover:bg-six transition-all duration-300 hover:text-seven p-2.5 sm:p-3 border border-[#161721] rounded-full"
             >
               <Mail size={18} strokeWidth={1.5} />
             </a>

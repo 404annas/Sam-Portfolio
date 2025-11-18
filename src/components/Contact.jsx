@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 import avatar from "../assets/avatar.avif"; // Your circular profile image
-import star from "../assets/star.svg"; // The star icon for the marquee
+import star from "../assets/star2.svg"; // The star icon for the marquee
 
 // Icons from lucide-react library
 import { Github, Linkedin, Instagram, Globe } from "lucide-react";
@@ -17,7 +17,7 @@ const socialLinks = [
 // --- A small, reusable component for the marquee content ---
 const MarqueeContent = () => (
   <div className="flex items-center">
-    <span className="ibm text-xs font-medium text-third uppercase mx-4">
+    <span className="ibm text-xs font-medium text-seevn uppercase mx-4">
       Contact
     </span>
     <img src={star} alt="star" className="w-4 h-4" />
@@ -53,7 +53,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               // Apply a right border to all but the very last icon
-              className={`flex items-center justify-center h-24 hover:bg-six hover:text-third transition-all duration-300 ${
+              className={`flex items-center justify-center h-24 hover:bg-six hover:text-seven transition-all duration-300 ${
                 index < socialLinks.length - 1 ? "border-r border-black" : ""
               }`}
             >

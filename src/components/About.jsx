@@ -1,10 +1,10 @@
 import Marquee from "react-fast-marquee";
-import star from "../assets/star.svg";
+import star from "../assets/star2.svg";
 import CardWrapper from "./CardWrapper";
 
 const MarqueeContent = () => (
   <div className="flex items-center">
-    <span className="ibm text-xs font-medium text-third uppercase mx-4">
+    <span className="ibm text-xs font-medium text-seven uppercase mx-4">
       A techpreneur and problem Solver
     </span>
     <img src={star} alt="star" className="w-4 h-4" />

@@ -1,28 +1,28 @@
 import Marquee from "react-fast-marquee";
 import personImage from "../assets/person.avif";
-import star from "../assets/star.svg";
+import star from "../assets/star2.svg";
 import CardWrapper from "./CardWrapper";
 import mainImage from "../assets/main.jpeg";
 
 const MarqueeContent = () => (
   <div className="flex items-center">
-    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+    <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
       Computer Scientist
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
-    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+    <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
       Backend Engineer
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
-    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+    <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
       Project Manager
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
-    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+    <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
       E-commerce specialist
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
-    <span className="ibm text-[10px] text-xs font-medium text-third uppercase mx-4">
+    <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
       Blockchain
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -62,7 +62,7 @@ const Person = () => {
 
           {/* Marquee Section */}
           <div className="mt-4">
-            <div className="relative z-10 bg-six py-3 sm:py-4">
+            <div className="relative z-10 bg-second py-3 sm:py-4">
               <Marquee speed={60} gradient={false}>
                 <MarqueeContent />
                 <MarqueeContent />
