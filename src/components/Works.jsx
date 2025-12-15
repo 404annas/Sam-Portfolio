@@ -1,8 +1,16 @@
 import Marquee from "react-fast-marquee";
 import star from "../assets/star2.svg";
 import CardWrapper from "./CardWrapper";
-import Pepsi from "../assets/pespi.png";
-import pepsiLogo from "../assets/brand2.webp";
+import Pepsi from "../assets/pepsiLogo.png";
+import cockStudio from "../assets/cockStudio.png";
+import okPakistan from "../assets/okPakistan.jpg"
+import bahrain from "../assets/bahrain.png"
+import massAppeal from "../assets/massAppeal.png"
+import aryNews from "../assets/aryNews.png"
+import hkc from "../assets/hkc.png"
+import govPunjab from "../assets/govPunjab.png"
+import bonanza from "../assets/bonanza.png"
+import upf from "../assets/upf.png"
 
 const MarqueeContent = () => (
     <div className="flex items-center">
@@ -13,15 +21,29 @@ const MarqueeContent = () => (
     </div>
 );
 
-const StatBlock = ({ value, label }) => (
-    <div className="flex flex-col items-center justify-center py-4 px-3 sm:px-4">
-        {/* <p className="text-5xl text-third">{value}</p>
-        <p className="ibm text-xs text-[#393B2C] tracking-tight mt-4 sm:mt-6 font-semibold">
-            {label}
-        </p> */}
-        <img className="w-24 mt-2" loading="lazy" src={pepsiLogo} alt="Logo1" />
-    </div>
-);
+const logos = [Pepsi, cockStudio, okPakistan, bahrain, massAppeal, aryNews, hkc, govPunjab, bonanza, upf]
+
+const StatBlock = () => {
+    return (
+        <div className="grid grid-cols-2 border-forth">
+            {logos.map((logo, idx) => (
+                <div
+                    key={idx}
+                    className={`flex justify-center pt-2 pb-4 ${idx % 2 === 0 ? "border-r border-b border-forth" : "border-b border-forth" // odd index gets right border
+                        }`}
+                >
+                    <img
+                        className="w-28 h-auto mt-2 object-contain"
+                        loading="lazy"
+                        src={logo}
+                        alt="Logo"
+                    />
+                </div>
+            ))}
+        </div>
+    );
+};
+
 
 const Works = () => {
     return (
@@ -39,24 +61,23 @@ const Works = () => {
                 {/* Section 2: Stats Grid */}
                 <div
                     className="
-            flex-grow grid grid-cols-2 grid-rows-2 
             border-t border-forth mt-4 sm:mt-6
           "
                 >
-                    <div className="border-r border-b border-forth">
-                        <StatBlock value="110+" label="PROJECTS COMPLETED" />
+                    <div className=" ">
+                        <StatBlock />
                     </div>
-                    <div className="border-b border-forth">
+                    {/* <div className="border-b border-forth">
                         <StatBlock value="12+" label="YEARS EXPERIENCE" />
-                    </div>
-                    <div className="border-r border-forth">
+                    </div> */}
+                    {/* <div className="border-r border-forth">
                         <StatBlock value="95%" label="MODEL ACCURACY" />
                     </div>
                     <div>
                         <StatBlock value="20+" label="INDUSTRIES EXPLORED" />
-                    </div>
+                    </div> */}
                 </div>
-                <div
+                {/* <div
                     className="
             flex-grow grid grid-cols-2 
          border-forth
@@ -80,7 +101,7 @@ const Works = () => {
                     <div className="border-t border-forth">
                         <StatBlock value="12+" label="YEARS EXPERIENCE" />
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Section 3: Marquee Footer */}
