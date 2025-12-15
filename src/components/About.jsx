@@ -27,7 +27,7 @@ const About = () => {
       <div
         className="
           flex flex-col
-          max-h-[100vh] overflow-y-auto
+          max-h-[80vh] overflow-y-auto
           md:max-h-none md:overflow-visible
         "
       >
