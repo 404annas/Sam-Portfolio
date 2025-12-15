@@ -27,7 +27,7 @@ const Works = () => {
     return (
         <CardWrapper>
             {/* Main content area */}
-            <div className="flex-grow flex flex-col">
+            <div className="flex flex-col max-h-[80vh] sm:max-h-none overflow-y-auto md:overflow-visible">
                 {/* Section 1: About Me */}
                 <div className="text-[#2C2E28] px-4 sm:px-6 pt-6 sm:pt-8">
                     <p className="ibm text-xs font-medium tracking-tight">BRANDS I'VE WORKED WITH</p>
@@ -64,6 +64,18 @@ const Works = () => {
                 >
                     <div className="border-r border-t border-forth">
                         <StatBlock value="110+" label="PROJECTS COMPLETED" />
+                    </div>
+                    <div className="border-t border-forth">
+                        <StatBlock value="12+" label="YEARS EXPERIENCE" />
+                    </div>
+                    <div className="border-r border-t border-forth">
+                        <StatBlock value="12+" label="YEARS EXPERIENCE" />
+                    </div>
+                    <div className="border-t border-forth">
+                        <StatBlock value="12+" label="YEARS EXPERIENCE" />
+                    </div>
+                    <div className="border-r border-t border-forth">
+                        <StatBlock value="12+" label="YEARS EXPERIENCE" />
                     </div>
                     <div className="border-t border-forth">
                         <StatBlock value="12+" label="YEARS EXPERIENCE" />
