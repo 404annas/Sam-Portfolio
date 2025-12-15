@@ -7,18 +7,18 @@ import CardWrapper from "./CardWrapper";
 const servicesData = [
   {
     number: "01",
-    title: "Computer Scientist",
-    description: "DESIGN INTELLIGENT SYSTEMS THAT POWER FUTURE INNOVATIONS.",
+    title: "Digital Marketing Strategy",
+    description: "Data-driven audience and revenue growth.",
   },
   {
     number: "02",
-    title: "Backend Engineer",
-    description: "BUILD SCALABLE ARCHITECTURES THAT DRIVE DIGITAL PLATFORMS.",
+    title: "Public Relations (PR)",
+    description: "Building credibility and media presence.",
   },
   {
     number: "03",
-    title: "Project Manager",
-    description: "LEAD TEAMS EFFECTIVELY TO DELIVER STRATEGIC SOLUTIONS FAST.",
+    title: "Brand Reputation Management",
+    description: "Strengthening trust and brand authority.",
   },
   // {
   //   number: "04",
@@ -27,8 +27,34 @@ const servicesData = [
   // },
   {
     number: "04",
-    title: "Blockchain",
-    description: "DEVELOP SECURE LEDGER SYSTEMS THAT ENABLE TRUSTED NETWORKS.",
+    title: "Branding & Identity",
+    description: "Creating a clear, memorable brand presence.",
+  },
+  {
+    number: "05",
+    title: "CRM & CMS Development",
+    description: "Custom systems for customer and content management.",
+  },{
+    number: "06",
+    title: "AI & Automation",
+    description: "Streamlining operations and scaling efficiency.",
+  },{
+    number: "07",
+    title: "Landing Page Development",
+    description: "High-converting, performance-driven pages.",
+  },
+  ,{
+    number: "08",
+    title: "Creator Monetization",
+    description: "Turning reach into sustainable revenue.",
+  },,{
+    number: "09",
+    title: "Sales Growth Strategy",
+    description: "Scaling conversions and business growth.",
+  },,{
+    number: "10",
+    title: "Growth Consulting",
+    description: "Strategic guidance for long-term expansion.",
   },
 ];
 
@@ -41,10 +67,10 @@ const ServiceItem = ({ number, title, description, isFirst }) => (
     <div className="flex sm:flex-row flex-col items-start gap-2 sm:gap-4 px-4">
       <p className="ibm text-text-dark/50 text-xs sm:text-sm mt-1">{number}</p>
       <div>
-        <h3 className="text-xl sm:text-2xl text-third font-semibold tracking-wider uppercase">
+        <h3 className="text-xl sm:text-xl w-[120%] text-third font-semibold tracking-wider uppercase">
           {title}
         </h3>
-        <p className="ibm text-xs text-[#393B2C] mt-1 tracking-tight font-semibold max-w-[240px]">
+        <p className="ibm text-xs text-[#393B2C] mt-1 tracking-tight font-semibold max-w-[240px] uppercase">
           {description}
         </p>
       </div>

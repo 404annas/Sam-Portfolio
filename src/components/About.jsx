@@ -5,7 +5,7 @@ import CardWrapper from "./CardWrapper";
 const MarqueeContent = () => (
   <div className="flex items-center">
     <span className="ibm text-xs font-medium text-seven uppercase mx-4">
-      A techpreneur and problem Solver
+      PR, Marketing & Growth Specialist
     </span>
     <img src={star} alt="star" className="w-4 h-4" />
   </div>
@@ -29,7 +29,7 @@ const About = () => {
         <div className="text-[#2C2E28] px-4 sm:px-6 pt-6 sm:pt-8">
           <p className="ibm text-xs font-medium tracking-tight">ABOUT ME</p>
           <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium text-third uppercase">
-            Founder & CEO of software agency, Techxudo. Expert in Problem Solving, Application Design, Implementing Modern Application Techniques.
+            I help creators and brands turn visibility into revenue through strategic monetization, PR, and digital marketing, supported by CRM and CMS development, AI solutions, and smart automation to drive real, measurable results.
           </p>
         </div>
 
@@ -41,13 +41,13 @@ const About = () => {
           "
         >
           <div className="border-r border-b border-forth">
-            <StatBlock value="110+" label="PROJECTS COMPLETED" />
+            <StatBlock value="300+" label="PROJECTS COMPLETED" />
           </div>
           <div className="border-b border-forth">
-            <StatBlock value="12+" label="YEARS EXPERIENCE" />
+            <StatBlock value="16+" label="YEARS EXPERIENCE" />
           </div>
           <div className="border-r border-forth">
-            <StatBlock value="95%" label="MODEL ACCURACY" />
+            <StatBlock value="97%" label="MODEL ACCURACY" />
           </div>
           <div>
             <StatBlock value="20+" label="INDUSTRIES EXPLORED" />

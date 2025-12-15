@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import avatarImage from "../assets/avatarImage2.jfif";
+
 import avatar from "../assets/avatar.avif";
 import { Mail } from "lucide-react";
 
@@ -53,23 +55,23 @@ const Background = () => {
           <div className="flex flex-row items-center justify-between z-30">
             <img
               loading="lazy"
-              className="w-10 h-10 rounded-full bg-first hover:bg-six transition-all duration-300 border border-[#161721]"
-              src={avatar}
+              className="w-12 h-12 rounded-full bg-first hover:bg-six transition-all duration-300 border border-[#161721]"
+              src={avatarImage}
               alt="Avatar"
             />
-            <a href="mailto:syedmuhammadtalha.002@gmail.com" target="_blank"
+            <a href="mailto:haris@tapoos.dev" target="_blank"
               onMouseEnter={() => setCursor("url(/cursor2.svg), auto")}
               onMouseLeave={() => setCursor("url(/cursor1.svg), auto")}
-              className="bg-first hover:bg-six transition-all duration-300 hover:text-seven p-2.5 sm:p-3 border border-[#161721] rounded-full"
+              className="bg-first hover:bg-six transition-all duration-300 hover:text-seven p-2.5 sm:p-3 border-[#161721] rounded-full"
             >
               <Mail size={18} strokeWidth={1.5} />
             </a>
           </div>
 
           <div className="hidden lg:flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-6">
-            <p className="">Syed Talha Shah</p>
-            <div className="flex items-center gap-4">
-              <p>Founder and CEO <a href="http://techxudo.com/" target="_blank">@Techxudo</a></p>
+            <p className="">Haris Siyal</p>
+            <div className="">
+              <p>Tapoos | Techxudo | PR Media</p>
             </div>
           </div>
         </div>
@@ -87,7 +89,7 @@ const Background = () => {
             }}
             className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[23vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-48"
           >
-            TALHA SHAH
+            HARIS SIYAL
           </motion.h1>
         </div>
 

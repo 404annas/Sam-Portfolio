@@ -2,28 +2,28 @@ import Marquee from "react-fast-marquee";
 import personImage from "../assets/person.avif";
 import star from "../assets/star2.svg";
 import CardWrapper from "./CardWrapper";
-import mainImage from "../assets/main.jpeg";
+import mainImage from "../assets/mainImage.jfif";
 
 const MarqueeContent = () => (
   <div className="flex items-center">
     <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
-      Computer Scientist
+      Brand Growth Strategist
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
     <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
-      Backend Engineer
+      Creator Monetization Expert
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
     <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
-      Project Manager
+      Digital Marketing Strategist
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
     <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
-      E-commerce specialist
+      PR & Reputation Specialist
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
     <span className="ibm text-[10px] text-xs font-medium text-seven uppercase mx-4">
-      Blockchain
+      Revenue Growth Consultant
     </span>
     <img src={star} alt="star" className="w-3 h-3 sm:w-4 sm:h-4" />
   </div>
@@ -43,7 +43,7 @@ const Person = () => {
               "
               style={{ fontFamily: '"Instrument Serif", serif' }}
             >
-              TALHA SHAH
+              HARIS SIYAL
             </h2>
 
             {/* Dotted Line */}
@@ -53,7 +53,7 @@ const Person = () => {
             <div className="relative aspect-square w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] mx-auto">
               {/* <div className="absolute inset-0 bg-second"></div> */}
               <img
-                src={personImage}
+                src={mainImage}
                 alt="Sam Patel"
                 className="absolute inset-0 w-full h-full object-cover rounded-xl"
               />

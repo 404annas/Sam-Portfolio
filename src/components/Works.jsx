@@ -7,7 +7,7 @@ import pepsiLogo from "../assets/brand2.webp";
 const MarqueeContent = () => (
     <div className="flex items-center">
         <span className="ibm text-xs font-medium text-seven uppercase mx-4">
-            Brands We've Worked With
+            Brands I've Worked With
         </span>
         <img src={star} alt="star" className="w-4 h-4" />
     </div>
@@ -30,9 +30,9 @@ const Works = () => {
             <div className="flex-grow flex flex-col">
                 {/* Section 1: About Me */}
                 <div className="text-[#2C2E28] px-4 sm:px-6 pt-6 sm:pt-8">
-                    <p className="ibm text-xs font-medium tracking-tight">BRANDS WE'VE WORKED WITH</p>
+                    <p className="ibm text-xs font-medium tracking-tight">BRANDS I'VE WORKED WITH</p>
                     <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium uppercase text-third">
-                        Over the years, we have had the privilege of collaborating with top brands across industries.
+                        Over the years, I have had the privilege of collaborating with top brands across industries.
                     </p>
                 </div>
 
