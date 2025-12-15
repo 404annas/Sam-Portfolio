@@ -23,23 +23,27 @@ const StatBlock = ({ value, label }) => (
 const About = () => {
   return (
     <CardWrapper>
-      {/* Main content area */}
-      <div className="flex-grow flex flex-col">
+      {/* Scroll container for small devices */}
+      <div
+        className="
+          flex flex-col
+          max-h-[100vh] overflow-y-auto
+          md:max-h-none md:overflow-visible
+        "
+      >
         {/* Section 1: About Me */}
         <div className="text-[#2C2E28] px-4 sm:px-6 pt-6 sm:pt-8">
           <p className="ibm text-xs font-medium tracking-tight">ABOUT ME</p>
           <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium text-third uppercase">
-            I help creators and brands turn visibility into revenue through strategic monetization, PR, and digital marketing, supported by CRM and CMS development, AI solutions, and smart automation to drive real, measurable results.
+            I help creators and brands turn visibility into revenue through
+            strategic monetization, PR, and digital marketing, supported by CRM
+            and CMS development, AI solutions, and smart automation to drive real,
+            measurable results.
           </p>
         </div>
 
         {/* Section 2: Stats Grid */}
-        <div
-          className="
-            flex-grow grid grid-cols-2 grid-rows-2 
-            border-t border-forth mt-4
-          "
-        >
+        <div className="grid grid-cols-2 grid-rows-2 border-t border-forth mt-6">
           <div className="border-r border-b border-forth">
             <StatBlock value="300+" label="PROJECTS COMPLETED" />
           </div>
@@ -53,18 +57,19 @@ const About = () => {
             <StatBlock value="20+" label="INDUSTRIES EXPLORED" />
           </div>
         </div>
-      </div>
 
-      {/* Section 3: Marquee Footer */}
-      <div className="bg-six py-3 sm:py-4 mt-auto">
-        <Marquee speed={60} gradient={false}>
-          <MarqueeContent />
-          <MarqueeContent />
-          <MarqueeContent />
-        </Marquee>
+        {/* Section 3: Marquee Footer */}
+        <div className="bg-six py-3 sm:py-4 mt-0">
+          <Marquee speed={60} gradient={false}>
+            <MarqueeContent />
+            <MarqueeContent />
+            <MarqueeContent />
+          </Marquee>
+        </div>
       </div>
     </CardWrapper>
   );
 };
+
 
 export default About;
