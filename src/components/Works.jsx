@@ -84,7 +84,7 @@ const Works = () => {
             </div>
 
             {/* Section 3: Marquee Footer */}
-            <div className="bg-six py-3 sm:py-4 mt-auto">
+            <div className="bg-six py-3 sm:py-4">
                 <Marquee speed={60} gradient={false}>
                     <MarqueeContent />
                     <MarqueeContent />
