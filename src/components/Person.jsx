@@ -38,7 +38,7 @@ const Person = () => {
             {/* Name */}
             <h2
               className="
-                text-third text-[64px] lg:text-[72px]
+                text-third text-[62px] lg:text-[72px]
                 text-center leading-none whitespace-nowrap
               "
               style={{ fontFamily: '"Instrument Serif", serif' }}
