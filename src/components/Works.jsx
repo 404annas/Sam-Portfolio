@@ -11,35 +11,64 @@ import hkc from "../assets/hkc.png"
 import govPunjab from "../assets/govPunjab.png"
 import bonanza from "../assets/bonanza.png"
 import upf from "../assets/upf.png"
+import sonyMusic from "../assets/sonyMusic.png"
+import tSeries from "../assets/tSeries.png"
+import jacquline1 from "../assets/jacquline2.webp"
+import andra from "../assets/andra3.jpg"
+import bilal from "../assets/bilal2.jpg"
+import feroze from "../assets/feroze.jpg"
+import bohemia from "../assets/bohemia.jpg"
+import mahesh from "../assets/mahesh.jfif"
+import farhan from "../assets/farhan2.jpg"
+import catalin from "../assets/catalin2.jpg"
+import abdullahS from "../assets/abdullahS2.jpg"
+import sahir from "../assets/sahir.jpg"
+import sarah from "../assets/sarah.jpg"
+import mawra from "../assets/mawra.jpg"
+import syra from "../assets/syra.jpg"
+import humaima from "../assets/humaima.jpg"
+import media from "../assets/media.jpg"
+import social from "../assets/social2.png"
+import bride from "../assets/bride3.png"
+import akcent from "../assets/akcent.jpg"
 
 const MarqueeContent = () => (
     <div className="flex items-center">
         <span className="ibm text-xs font-medium text-seven uppercase mx-4">
-            Brands I've Worked With
+            Brands & Creators I've Worked With
         </span>
         <img src={star} alt="star" className="w-4 h-4" />
     </div>
 );
 
-const logos = [Pepsi, cockStudio, okPakistan, bahrain, massAppeal, aryNews, hkc, govPunjab, bonanza, upf]
+const logos = [Pepsi, cockStudio, okPakistan, bahrain, massAppeal, aryNews, hkc, govPunjab, bonanza, upf, sonyMusic, tSeries, media, bride, social, akcent, jacquline1, andra, bilal, feroze, bohemia, mahesh, farhan, catalin, abdullahS, sahir, sarah,mawra, syra, humaima]
 
 const StatBlock = () => {
     return (
         <div className="grid grid-cols-2 border-forth">
-            {logos.map((logo, idx) => (
-                <div
-                    key={idx}
-                    className={`flex justify-center pt-2 pb-4 ${idx % 2 === 0 ? "border-r border-b border-forth" : "border-b border-forth" // odd index gets right border
-                        }`}
-                >
-                    <img
-                        className="w-28 h-auto mt-2 object-contain"
-                        loading="lazy"
-                        src={logo}
-                        alt="Logo"
-                    />
-                </div>
-            ))}
+            {logos.map((logo, idx) => {
+                const containIndexes = [4, 6, 8, 10]; // 5th, 7th, 9th, 11th
+
+                return (
+                    <div
+                        key={idx}
+                        className={`flex justify-center pt-2 pb-4 ${idx % 2 === 0
+                                ? "border-r border-b border-forth"
+                                : "border-b border-forth"
+                            }`}
+                    >
+                        <img
+                            src={logo}
+                            alt="Logo"
+                            loading="lazy"
+                            className={`w-32 h-auto mt-2 ${containIndexes.includes(idx)
+                                    ? "object-contain"
+                                    : "object-cover"
+                                }`}
+                        />
+                    </div>
+                );
+            })}
         </div>
     );
 };
@@ -52,9 +81,9 @@ const Works = () => {
             <div className="flex flex-col max-h-[80vh] sm:max-h-none overflow-y-auto md:overflow-visible">
                 {/* Section 1: About Me */}
                 <div className="text-[#2C2E28] px-4 sm:px-6 pt-6 sm:pt-8">
-                    <p className="ibm text-xs font-medium tracking-tight">BRANDS I'VE WORKED WITH</p>
+                    <p className="ibm text-xs font-medium tracking-tight">BRANDS & CREATORS I'VE WORKED WITH</p>
                     <p className="text-2xl mt-4 leading-7 max-w-xs sm:max-w-sm font-medium uppercase text-third">
-                        Over the years, I have had the privilege of collaborating with top brands across industries.
+                        Over the years, I have had the privilege of collaborating with top brands and creators across industries.
                     </p>
                 </div>
 

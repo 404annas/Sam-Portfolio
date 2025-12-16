@@ -69,7 +69,7 @@ const Background = () => {
           </div>
 
           <div className="hidden lg:flex flex-row items-center justify-between text-first w-full text-xs ibm z-30 px-6">
-            <p className="">Haris Siyal</p>
+            <p className="">Haris Sajjad</p>
             <div className="">
               <p>Tapoos | Techxudo | PR Media</p>
             </div>
@@ -87,9 +87,9 @@ const Background = () => {
               perspective: 600,
               transformOrigin: "bottom",
             }}
-            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[23vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-48"
+            className="text-first text-[12vw] sm:text-[10vw] md:text-[12vw] lg:text-[22vw] text-center leading-none whitespace-nowrap mx-5 select-none tracking-tight pt-48"
           >
-            HARIS SIYAL
+            HARIS SAJJAD
           </motion.h1>
         </div>
 

@@ -60,7 +60,7 @@ const Services = () => {
 
         {/* Marquee Footer */}
         <div className="bg-six py-4 mt-4">
-          <Marquee speed={80} gradient={false}>
+          <Marquee speed={60} gradient={false}>
             <MarqueeContent />
             <MarqueeContent />
             <MarqueeContent />

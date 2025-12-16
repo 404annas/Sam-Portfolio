@@ -38,16 +38,16 @@ const Person = () => {
             {/* Name */}
             <h2
               className="
-                text-third text-[64px] lg:text-[75px]
+                text-third text-[64px] lg:text-[72px]
                 text-center leading-none whitespace-nowrap
               "
               style={{ fontFamily: '"Instrument Serif", serif' }}
             >
-              HARIS SIYAL
+              HARIS SAJJAD
             </h2>
 
             {/* Dotted Line */}
-            <div className="dotted-line-lg my-8"></div>
+            <div className="dotted-line-lg my-8 ml-2"></div>
 
             {/* Image Section */}
             <div className="relative aspect-square w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] mx-auto">
