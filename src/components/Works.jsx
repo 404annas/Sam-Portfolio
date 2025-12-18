@@ -31,6 +31,11 @@ import media from "../assets/media.jpg"
 import social from "../assets/social2.png"
 import bride from "../assets/bride3.png"
 import akcent from "../assets/akcent.jpg"
+import siren from "../assets/siren.jpg"
+import sana from "../assets/sana.jpg"
+import mathira from "../assets/mathira.jpg"
+import sanam from "../assets/sanam.jpg"
+import urwa from "../assets/urwa.jpg"
 
 const MarqueeContent = () => (
     <div className="flex items-center">
@@ -41,7 +46,7 @@ const MarqueeContent = () => (
     </div>
 );
 
-const logos = [Pepsi, cockStudio, okPakistan, bahrain, massAppeal, aryNews, hkc, govPunjab, bonanza, upf, sonyMusic, tSeries, media, bride, social, akcent, jacquline1, andra, bilal, feroze, bohemia, mahesh, farhan, catalin, abdullahS, sahir, sarah,mawra, syra, humaima]
+const logos = [Pepsi, cockStudio, okPakistan, bahrain, massAppeal, aryNews, hkc, govPunjab, bonanza, upf, sonyMusic, tSeries, media, bride, social, siren, akcent, bilal, feroze, bohemia, mahesh, farhan, catalin, abdullahS, sahir, sarah, mawra, syra, humaima, sana, mathira, sanam, urwa, andra, jacquline1]
 
 const StatBlock = () => {
     return (
@@ -53,8 +58,8 @@ const StatBlock = () => {
                     <div
                         key={idx}
                         className={`flex justify-center pt-2 pb-4 ${idx % 2 === 0
-                                ? "border-r border-b border-forth"
-                                : "border-b border-forth"
+                            ? "border-r border-b border-forth"
+                            : "border-b border-forth"
                             }`}
                     >
                         <img
@@ -62,8 +67,8 @@ const StatBlock = () => {
                             alt="Logo"
                             loading="lazy"
                             className={`w-32 h-auto mt-2 ${containIndexes.includes(idx)
-                                    ? "object-contain"
-                                    : "object-cover"
+                                ? "object-contain"
+                                : "object-cover"
                                 }`}
                         />
                     </div>
