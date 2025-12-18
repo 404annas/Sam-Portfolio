@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 import personImage from "../assets/person.avif";
 import star from "../assets/star2.svg";
 import CardWrapper from "./CardWrapper";
-import mainImage from "../assets/mainImage.jfif";
+import mainImage from "../assets/mainImage3.jfif";
 
 const MarqueeContent = () => (
   <div className="flex items-center">
