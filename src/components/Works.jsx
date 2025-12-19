@@ -36,6 +36,29 @@ import sana from "../assets/sana.jpg"
 import mathira from "../assets/mathira.jpg"
 import sanam from "../assets/sanam.jpg"
 import urwa from "../assets/urwa.jpg"
+import kamal from "../assets/kamal.jpg"
+import aliHamza from "../assets/aliHamza.jpg"
+import rahat from "../assets/rahat.webp"
+import faraz from "../assets/faraz.jfif"
+import soch from "../assets/soch.jpg"
+import aliAzmat from "../assets/aliAzmat.jpg"
+import asrar from "../assets/asrar.jpg"
+import nouman from "../assets/nouman.webp"
+import junaid from "../assets/junaid.jpg"
+import amanat from "../assets/amanat.jpg"
+import aliHamza2 from "../assets/aliHamza2.jpg"
+import aryan from "../assets/aryan.jpg"
+import kashifKK from "../assets/kk.jpg"
+import umerDuzz from "../assets/umerDuzz.jpg"
+import saqib from "../assets/saqib.jpg"
+import abdullahMuzzaffar from "../assets/abdullahMuzzaffar2.jpg"
+import shahidMalik from "../assets/shahidMalik.jpg"
+import nabeel from "../assets/nabeel.jpg"
+import zunair from "../assets/zunair.jpg"
+import awais from "../assets/awais.jfif"
+import callBand from "../assets/callBand.jfif"
+import sajawal from "../assets/sajawal.jpg"
+import imperialMangoes from "../assets/imperialMangoes.jpg"
 
 const MarqueeContent = () => (
     <div className="flex items-center">
@@ -46,7 +69,7 @@ const MarqueeContent = () => (
     </div>
 );
 
-const logos = [Pepsi, cockStudio, okPakistan, bahrain, massAppeal, aryNews, hkc, govPunjab, bonanza, upf, sonyMusic, tSeries, media, bride, social, siren, akcent, bilal, feroze, bohemia, mahesh, farhan, catalin, abdullahS, sahir, sarah, mawra, syra, humaima, sana, mathira, sanam, urwa, andra, jacquline1]
+const logos = [Pepsi, cockStudio, okPakistan, bahrain, massAppeal, aryNews, hkc, govPunjab, bonanza, upf, sonyMusic, tSeries, media, bride, social, siren, imperialMangoes, sarah, mawra, syra, humaima, sana, mathira, sanam, urwa, andra, jacquline1, akcent, bilal, feroze, bohemia, mahesh, farhan, catalin, abdullahS, sahir, kamal, aliHamza, rahat, faraz, soch, aliAzmat, asrar, nouman, junaid, umerDuzz, kashifKK, aryan, aliHamza2, amanat, saqib, abdullahMuzzaffar, shahidMalik, nabeel, sajawal, zunair, awais, callBand]
 
 const StatBlock = () => {
     return (
